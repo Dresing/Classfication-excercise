@@ -56,7 +56,7 @@ for i in range(1, 100):
 	if accuracy > best[1]:
 		best = (i, accuracy, accuracy_scores, recall_scores)
 
-print("KNN-%0.2i: %0.2f (+/- %0.2f). Recall: %0.2f (+/- %0.2f)." % (best[0], best[2].mean(), best[2].std() * 2, best[3].mean(), best[3].std() * 2))
+print("KNN-%0.2i: %0.2f (+/- %0.2f). Log-loss: %0.2f (+/- %0.2f)." % (best[0], best[2].mean(), best[2].std() * 2, best[3].mean(), best[3].std() * 2))
 
 
 
@@ -75,7 +75,7 @@ for i in range(1, 100):
 	if accuracy > best[1]:
 		best = (i, accuracy_scores.mean(), accuracy_scores, recall_scores)
 
-print("DT-GINI  %0.2f: %0.2f (+/- %0.2f). Recall: %0.2f (+/- %0.2f)." % (best[0] * 0.001, best[2].mean(), best[2].std() * 2, best[3].mean(), best[3].std() * 2))
+print("DT-GINI  %0.2f: %0.2f (+/- %0.2f). Log-loss: %0.2f (+/- %0.2f)." % (best[0] * 0.001, best[2].mean(), best[2].std() * 2, best[3].mean(), best[3].std() * 2))
 
 
 
@@ -103,7 +103,7 @@ for i in ['rbf']:
 	if accuracy > best[1]:
 		best = (i, accuracy_scores.mean(), accuracy_scores, recall_scores)
 
-print("Support Vector (%s): %0.2f (+/- %0.2f). Recall: %0.2f (+/- %0.2f)." % (best[0], best[2].mean(), best[2].std() * 2, best[3].mean(), best[3].std() * 2 ))
+print("Support Vector (%s): %0.2f (+/- %0.2f). Log-loss: %0.2f (+/- %0.2f)." % (best[0], best[2].mean(), best[2].std() * 2, best[3].mean(), best[3].std() * 2 ))
 
 
 
@@ -117,4 +117,4 @@ for i in range(0,1):
 	if accuracy > best[1]:
 		best = (i, accuracy_scores.mean(), accuracy_scores, recall_scores)
 
-print("Bayes: %0.2f (+/- %0.2f). Recall: %0.2f (+/- %0.2f)." % (best[2].mean(), best[2].std() * 2, best[3].mean(), best[3].std() * 2 ))
+print("Bayes: %0.2f (+/- %0.2f). Log-loss: %0.2f (+/- %0.2f)." % (best[2].mean(), best[2].std() * 2, best[3].mean(), best[3].std() * 2 ))
